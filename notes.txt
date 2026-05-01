@@ -831,4 +831,50 @@ class - 7
 
             -> Wait Till the Status is completed 
 
-            
+
+class - 8
+=========
+
+    -> Discovery With Multiple Servers Over Network 
+
+        -> Setup Multiple Instance in a network 
+
+        -> 10.0.0.0 - 10.0.15.255 (this range has 4k devices)
+
+            -> 10.0.0.0
+            -> 10.0.0.1
+            -> 10.0.0.2
+            -> 10.0.0..
+            -> 10.0.0..
+            -> 10.0.0.255
+            -> 10.0.1.0
+            -> 10.0.1.1
+            .
+            .
+            -> 10.0.1.255
+            .
+            .
+            -> 10.0.15.255 
+
+    -> Discovery With Linux Server 
+
+        -> SSH Login Should be verified 
+
+            -> Install GitBash (running ssh commands)
+
+            -> Update SSH Key (pem/key file i.e itom.pem) in mid server 
+
+            -> Change Permissions (Set Key To Read Only Permissions)
+
+                -> chmod 400 itom.pem
+
+        -> Steps To Verify SSH Connectivity
+
+            -> ssh -i key username@ip-address 
+
+            -> chmod 400 itom.pem
+
+            -> ssh -i itom.pem ubuntu@172.31.17.25 
+
+    
+
